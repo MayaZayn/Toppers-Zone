@@ -1,0 +1,1014 @@
+/* @font-face {
+    font-family: 'Forum';
+    src: url(../fonts/Forum-Regular.woff2) format('woff2');
+} */
+
+/* Common */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.line {
+    width: 100px;
+    height: 3.5px;
+    background-color: #FBDC6A;
+    margin: auto;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.pad {
+    padding: 100px 0px;
+}
+
+.mid {
+    margin: 0px 5%;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Navigation Bar */
+
+.header {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 40px;
+    overflow: auto;
+    position: fixed;
+    z-index: 100;
+}
+
+.header-logo img {
+    height: 40px;
+    margin-left: 50px;
+    float: left;
+    border-radius: 50%;
+}
+
+.nav ul {
+    list-style: none;
+    float: right;
+    margin-right: 50px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.nav ul li {
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.nav a::after {
+    content: "";
+    background-color: #FBDC6A;
+    display: block;
+    height: 1px;
+    width: 0;
+    transition: 0.5s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #FBDC6A;
+}
+
+.nav .home-nav::after {
+    content: "";
+    background-color: #FBDC6A;
+    display: block;
+    height: 1px;
+    width: 100%;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Home Section */
+
+.home {
+    background-image: url(../images/Untitled\ design\ \(5\).png);
+    height: 100vh;
+    position: relative;
+}
+
+.home-content {
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FBDC6A;
+}
+
+.home-overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    opacity: 0.9;
+    background-color: black;
+    top: 0;
+}
+
+.home-content h1 {
+    font-weight: 100;
+    font-size: 100px;
+}
+
+.home-content p {
+    margin: 15px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 800px;
+    color: #ffedaa;
+}
+
+.home-btn {
+    padding: 12px 50px;
+    background-color: black;
+    border-radius: 100px;
+    border: 0.5px solid #FBDC6A;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 30px;
+    color: #FBDC6A;
+}
+
+.home-btn-right {
+    background-color: #FBDC6A;
+    color: black;
+    margin-left: 15px;
+}
+
+.home-btn:hover {
+    background-color: rgba(79, 79, 79, 0.285);
+}
+
+.home-btn-right:hover {
+    background-color: #fbdb6a9e;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* About Section */
+
+.about-header {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.about-content {
+    overflow: auto;
+}
+
+.about-card {
+    background-color: rgb(0, 0, 0);
+    float: left;
+    width: 30%;
+    padding: 20px 15px;
+    text-align: center;
+    border: 1px solid #FBDC6A;
+    position: relative;
+    border-radius: 10px;
+    color: white;
+    height: 40vh;
+}
+
+.about-card h3 {
+    margin: 15px 0;
+}
+
+.about-card i {
+    font-size: 25px;
+    color: #FBDC6A;
+}
+
+.about-card p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 25px;
+    color: lightgray;
+}
+
+.about-card a {
+    text-decoration: none;
+    color: #FBDC6A;
+}
+
+.about-card::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+
+    height: 0;
+    width: 0;
+
+    left: 0;
+    top: 0;
+
+    background-color: #FBDC6A;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+
+.about-card:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.about-card:hover {
+    z-index: 5;
+    color: black;
+}
+
+.about-card:hover p {
+    color: black;
+}
+
+.about-card:hover a {
+    color: rgb(48, 48, 48);
+    font-style: italic;
+}
+
+.about-card:hover i {
+    color: black;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+.featured {
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+.featured-line {
+    background-color: #fecd19;
+}
+
+.featured-header {
+    text-align: center;
+}
+
+.featured-card {
+    display: inline-block;
+    margin-top: 80px;
+    width: 29.75%;
+    text-align: center;
+}
+
+.featured-card-title {
+    text-transform: uppercase;
+}
+
+.featured-img {
+    position: relative;
+    border-radius: 10px;
+}
+
+.featured-img img {
+    width: 90%;
+    padding: 14px 0;
+    border: 4px solid black;
+}
+
+.featured-overlay {
+    background-color: rgba(0, 0, 0, 0.668);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.featured-overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.featured-card:hover .featured-overlay {
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.featured-link:active .featured-card-icon {
+    color: white;
+}
+
+.featured-overlay-content .featured-text {
+    font-size: larger;
+}
+
+.featured-overlay-content {
+    color: #FBDC6A;
+}
+
+.featured-card-icon {
+    font-size: 25px;
+    color: #FBDC6A;
+}
+
+.featured-icon-right {
+    margin-left: 15px;
+}
+
+.featured-overlay:hover .featured-card-title {
+    margin-top: 15px;
+    transition: 0.5s;
+}
+
+.featured-overlay:hover .featured-card-content {
+    margin-bottom: 15px;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Services Section */
+
+.services {
+    margin-bottom: 50px;
+}
+
+.services-header {
+    margin-bottom: 100px;
+}
+
+.services-header h2 {
+    text-align: center;
+}
+
+.services-content {
+    overflow: auto;
+}
+
+.services-card {
+    background-color: rgb(0, 0, 0);
+    float: left;
+    width: 30%;
+    padding: 20px 15px;
+    text-align: center;
+    border: 1px solid #FBDC6A;
+    position: relative;
+    border-radius: 10px;
+    color: white;
+    height: 28vh;
+}
+
+.services-card::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+
+    height: 0;
+    width: 0;
+
+    left: 0;
+    top: 0;
+
+    background-color: #FBDC6A;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.services-card:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.services-card h3 {
+    margin: 15px 0;
+}
+
+.services-card i {
+    font-size: 25px;
+    color: #FBDC6A;
+}
+
+.services-card p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 25px;
+    color: lightgray;
+}
+
+.services-card a {
+    text-decoration: none;
+    color: #FBDC6A;
+}
+
+.services-card:hover {
+    z-index: 5;
+    color: black;
+}
+
+.services-card:hover p {
+    color: black;
+}
+
+.services-card:hover a {
+    color: rgb(48, 48, 48);
+    font-style: italic;
+}
+
+.services-card:hover i {
+    color: black;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Achievments Section */
+
+.achievments {
+    background-image: url(../images/featured\ \(8\).png);
+    background-attachment: fixed;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.second-achievments {
+    background-image: url(../images/8.png);
+}
+
+.achievments-overlay {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.achievments-content {
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.achievments-card {
+    float: left;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.achievments-card i {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: #fecd19;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Pricing Section */
+
+.pricing-content {
+    overflow: auto;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.pricing-card {
+    float: left;
+    width: 30%;
+    text-align: center;
+    padding: 50px 0px;
+    border: 1px solid #FBDC6A;
+    position: relative;
+    border-radius: 10px;
+    font-size: 25px;
+    color: black;
+    transition: 0.5s;
+    background-color: whitesmoke;
+}
+
+.pricing-card::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+
+    width: 100%;
+    height: 0;
+
+    top: 0;
+    right: 0;
+
+    background-color: black;
+    opacity: 0;
+
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.pricing-card:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.pricing-card:hover {
+    z-index: 5;
+}
+
+.pricing-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    border: 1px solid black;
+}
+
+.pricing-card:hover .pricing-circle {
+    border: 2px solid #FBDC6A;
+}
+
+.pricing-card:hover .pricing-card {
+    border: 2px solid #FBDC6A;
+}
+
+.pricing-card-title {
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.big-price {
+    font-size: 65px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+
+.duration-price {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 30%);
+}
+
+.pricing-card ul {
+    list-style-type: none;
+    line-height: 35px;
+    font-size: smaller;
+}
+
+.pricing-card:hover {
+    color: #FBDC6A;
+}
+
+.pricing-btn {
+    padding: 8px 20px;
+    background-color: rgba(0, 0, 0, 0.205);
+    border-radius: 100px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 30px;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+
+.pricing-card:hover .pricing-btn {
+    background-color: #FBDC6A;
+}
+
+.pricing-circle p {
+    transition: 0.5s;
+}
+
+.pricing-card:hover .pricing-circle p {
+    color: #FBDC6A;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Perks Section */
+
+.perks-container {
+    width: 70%;
+    margin: auto;
+}
+
+.perks {
+    padding: 100px 0;
+    background-color: black;
+    padding-bottom: 200px;
+    color: #FBDC6A;
+}
+
+.perks-header {
+    color: white;
+}
+
+.perks-line {
+    margin: 10px 0;
+    margin-bottom: 50px;
+}
+
+.perks p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.perks-content {
+    height: 200px;
+    position: relative;
+}
+
+.perks-img {
+    position: absolute;
+    right: 0;
+}
+
+.perks-text {
+    position: absolute;
+    left: 0;
+}
+
+.perks-text span {
+    line-height: 30px;
+    font-size: 18px;
+    color: white;
+}
+
+.perks-img img {
+    width: 400px;
+    height: 293px;
+    border-radius: 10px;
+}
+
+.perks-img ul {
+    text-align: center;
+}
+
+.perks-img ul li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.perks-img ul .current-bullet {
+    background-color: #FBDC6A;
+}
+
+.perks-img ul li:hover {
+    background-color:#FBDC6A;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Team Section */
+
+.team {
+    padding: 60px;
+}
+
+.team-header {
+    margin-bottom: 50px;
+}
+
+.team-header h2 {
+    text-align: center;
+}
+
+.team-content {
+    overflow: auto;
+}
+
+.team-card {
+    float: left;
+    background-color: black;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+.team-card::after {
+    position: absolute;
+    content: "";
+    z-index: 1;
+
+    width: 100%;
+    height: 0;
+
+    top: 0;
+    right: 0;
+
+    background-color: gray;
+    opacity: 0;
+
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.team-card:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+.team-info h3 {
+    transition: 0.5s;
+    color: #FBDC6A;
+    text-transform: capitalize;
+}
+
+.team-info p {
+    transition: 0.5s;
+    color: white;
+}
+
+.team-card:hover .team-info h3 {
+    color: white;
+}
+
+.team-card:hover .team-info p {
+    color: #FBDC6A;
+}
+
+.team-img {
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.team-img img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.team-overley {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    height: 93.75%;
+    background-color: rgba(0, 0, 0, 0.452);
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.team-overley a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #FBDC6A;
+    color: black;
+    font-size: 20px;
+    margin-left: auto;
+}
+
+.team-overley a i {
+    line-height: 40px;
+}
+
+.team-card:hover .team-overley {
+    opacity: 1;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Reviews Section */
+
+.reviews {
+    background-image: url(../images/reviews.png);
+    background-attachment: fixed;
+    position: relative;
+    padding-bottom: 200px;
+}
+
+.reviews-container {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.reviews-overlay {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.reviews-content {
+    overflow: auto;
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+.reviews-card {
+    padding: 20px;
+    float:left;
+    width: 45%;
+}
+
+.reviews-right {
+    margin-left: 10%;
+}
+
+.reviews-img {
+    display: inline-block;
+}
+
+.reviews-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.reviews-card-top {
+    position: relative;
+}
+
+.reviews-img-info {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translate(10%, -50%);
+}
+
+.reviews-img-description {
+    margin-left: 20px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* News Section */
+
+.news-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.news-content {
+    overflow: auto;
+    letter-spacing: 1px;
+}
+
+.news-card {
+    float: left;
+    width: 30%;
+    position: relative;
+    background-color: black;
+    border: 1px solid #FBDC6A;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+}
+
+.news-card::after {
+    position: absolute;
+    content: "";
+    background-color: rgb(154, 154, 154);
+    border-radius: 10px;
+
+    width: 100%;
+    height: 0;
+    
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.news-card:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+.news-card:hover .news-info a {
+    font-style: italic;
+}
+
+.news-img {
+    margin-bottom: 20px;
+}
+
+.news-img img {
+    width: 60%;
+    border-radius: 10px;
+}
+
+.news-info a {
+    text-decoration: none;
+    position: absolute;
+    z-index: 2;
+    bottom: 5%;
+    left: 5%;
+    color: #FBDC6A;
+}
+
+.news-icons {
+    word-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.news-icons i {
+    color: #FBDC6A;
+}
+
+.news-info h3, .news-info p {
+    margin-bottom: 25px;
+}
+
+.news-info p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Footer Section */
+
+.footer {
+    background-color: black;
+    color: white;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.footer-icons i {
+    background-color: #FBDC6A;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    transition: 0.5s;
+}
+
+.footer-icons i:hover {
+    background-color: #ffefb7;
+}
+
+.pad-footer {
+    padding: 10px 0px;
+}
+
+.footer-icons a {
+    color: black;
+}
+
+.footer-text {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-family: 'varela round' , sans-serif;
+}
